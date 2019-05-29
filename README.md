@@ -83,3 +83,53 @@ Drama & Company 과제
 	}
 }
 ```
+
+### 4) 배차 조회
+* /v1/dispatches
+* GET
+* Response
+```json
+{
+	'dispatches': {
+		'wait': [
+			{'customer': 'xxx@gmail.com', 'address': 'nowon-gu', 'req_time': '2019-01-01 00:00:00'}
+		],
+		'complete': [
+			{'customer': 'xxx@gmail.com', 'address': 'nowon-gu', 'req_time': '2019-01-01 00:00:00', 'driver': 'xxx@gmail.com', 'res_time': '2019-01-01 01:00:00'}
+		],
+	}
+}
+```
+
+### 5) 배차 응답
+* /v1/dispatches/response
+* PUT
+* Data
+	* email(String) : driver
+	* dispatch_id(Integer)
+* Response
+```json
+{
+	'dispatch': {'email': 'xxx@gmail.com', 'dispatch_id': 1}
+}
+```
+* Error
+```json
+# 올바르지 않는 유저
+{
+	'error': {
+		'code': 422,
+		'message': 'Invaild driver',
+		'more_info': {}
+	}
+}
+
+# 이미 배차됨
+{
+	'error': {
+		'code': 422,
+		'message': 'This dispatch was already allocated',
+		'more_info': {}
+	}
+}
+```
