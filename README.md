@@ -3,15 +3,24 @@ Drama & Company 과제
 
 # Environments
 * Python 2.7
+* pip 19.1.1
 * Flask 1.0.3
 * SQLAlchemy 1.3.4
 
 # 실행
+### 1) Install packages
+```shell
+pip install -r web_app/requirements.txt
+```
+
+### 2) 서버 실행
 ```shell
 cd web_app
 ./start.sh
 ```
-
+### 3) 서버 접속
+http://localhost:5000
+ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response
 
 # DB 설계
 ![alt text](db.png)
