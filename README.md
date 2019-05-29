@@ -19,8 +19,8 @@ cd web_app
 ./start.sh
 ```
 ### 3) 서버 접속
-http://localhost:5000
-ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response
+http://localhost:5000<br>
+ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 
 # DB 설계
 ![alt text](db.png)
