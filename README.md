@@ -43,10 +43,10 @@ ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 ```json
 # 이메일 중복
 {
-	'error': {
-		'code': 422,
-		'message': 'Duplicate email',
-		'more_info': {'email': 'xxx@gmail.com'}
+	"error": {
+		"code": 422,
+		"message": "Duplicate email",
+		"more_info": {"email": "xxx@gmail.com"}
 	}
 }
 ```
@@ -61,17 +61,17 @@ ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 * Response
 ```json
 {
-	'users': {'email': 'xxx@gmail.com'}
+	"users": {"email": "xxx@gmail.com"}
 }
 ```
 * Error
 ```json
 # 이메일/비번 잘못 입력
 {
-	'error': {
-		'code': 422,
-		'message': 'Wrong email or password',
-		'more_info': {'email': 'xxx@gmail.com'}
+	"error": {
+		"code": 422,
+		"message": "Wrong email or password",
+		"more_info": {"email": "xxx@gmail.com"}
 	}
 }
 ```
@@ -85,17 +85,17 @@ ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 * Response
 ```json
 {
-	'dispatch': {'email': 'xxx@gmail.com', 'address': 'nowon-gu'}
+	"dispatch": {"email": "xxx@gmail.com", "address": "nowon-gu"}
 }
 ```
 * Error
 ```json
 # 올바르지 않는 유저
 {
-	'error': {
-		'code': 422,
-		'message': 'Invaild customer',
-		'more_info': {}
+	"error": {
+		"code": 422,
+		"message": "Invaild customer",
+		"more_info": {}
 	}
 }
 ```
@@ -106,12 +106,12 @@ ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 * Response
 ```json
 {
-	'dispatches': {
-		'wait': [
-			{'customer': 'xxx@gmail.com', 'address': 'nowon-gu', 'req_time': '2019-01-01 00:00:00'}
+	"dispatches": {
+		"wait": [
+			{"customer": "xxx@gmail.com", "address": "nowon-gu", "req_time": "2019-01-01 00:00:00"}
 		],
-		'complete': [
-			{'customer': 'xxx@gmail.com', 'address': 'nowon-gu', 'req_time': '2019-01-01 00:00:00', 'driver': 'xxx@gmail.com', 'res_time': '2019-01-01 01:00:00'}
+		"complete": [
+			{"customer": "xxx@gmail.com", "address": "nowon-gu", "req_time": "2019-01-01 00:00:00", "driver": "xxx@gmail.com", "res_time": "2019-01-01 01:00:00"}
 		],
 	}
 }
@@ -126,26 +126,26 @@ ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 * Response
 ```json
 {
-	'dispatch': {'email': 'xxx@gmail.com', 'dispatch_id': 1}
+	"dispatch": {"email": "xxx@gmail.com", "dispatch_id": 1}
 }
 ```
 * Error
 ```json
 # 올바르지 않는 유저
 {
-	'error': {
-		'code': 422,
-		'message': 'Invaild driver',
-		'more_info': {}
+	"error": {
+		"code": 422,
+		"message": "Invaild driver",
+		"more_info": {}
 	}
 }
 
 # 이미 배차됨
 {
-	'error': {
-		'code': 422,
-		'message': 'This dispatch was already allocated',
-		'more_info': {}
+	"error": {
+		"code": 422,
+		"message": "This dispatch was already allocated",
+		"more_info": {}
 	}
 }
 ```
