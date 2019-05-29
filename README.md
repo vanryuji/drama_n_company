@@ -6,6 +6,13 @@ Drama & Company 과제
 * Flask 1.0.3
 * SQLAlchemy 1.3.4
 
+# 실행
+```shell
+cd web_app
+./start.sh
+```
+
+
 # DB 설계
 ![alt text](db.png)
 
