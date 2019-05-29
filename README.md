@@ -14,6 +14,7 @@ pip install -r web_app/requirements.txt
 ### 2) 서버 실행
 ```shell
 cd web_app
+chmod 755 start.sh
 ./start.sh
 ```
 ### 3) 서버 접속
