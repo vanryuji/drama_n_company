@@ -36,7 +36,7 @@ ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
 * Response
 ```json
 {
-	'users': {'email': 'xxx@gmail.com', 'driver': 't'}
+	"users": {"email": "xxx@gmail.com", "driver": "t"}
 }
 ```
 * Error
