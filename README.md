@@ -20,7 +20,7 @@ cd web_app
 ```
 ### 3) 서버 접속
 http://localhost:5000<br>
-ex) 배차 조회 API => http://localhost:5000/v1/dispatches/response<br>
+ex) 배차 조회 API => http://localhost:5000/v1/dispatches<br>
 
 # DB 설계
 ![alt text](db.png)
