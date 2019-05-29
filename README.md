@@ -10,7 +10,7 @@ Drama & Company 과제
 ![alt text](db.png)
 
 # API 스펙
-### 회원 가입
+### 1) 회원 가입
 * /v1/users/create
 * POST
 * data
@@ -20,21 +20,21 @@ Drama & Company 과제
 * Response
 ```json
 {
-	‘users’: {‘email’: ‘xxx@gmail.com’, ‘driver’: ‘t’}
+	'users': {'email': 'xxx@gmail.com', 'driver': 't'}
 }
 ```
 * Error
 ```json
 # 이메일 중복
 {
-	‘error’: {
-		‘code’: 422,
-		‘message’: ‘Duplicate email’,
-		‘more_info’: {‘email’: ‘xxx@gmail.com’}
+	'error': {
+		'code': 422,
+		'message': 'Duplicate email',
+		'more_info': {'email': 'xxx@gmail.com'}
 	}
 }
 
 ```
 
     
-### 
+### 2) 로그인
