@@ -1,0 +1,46 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+
+
+import sys
+
+from card_system import AccountManager
+
+
+def exe_cmd(data):
+    """
+    공백으로 구분되어진 데이터를 cmd(Add, Charge, ...)에 맞게 처리
+    :param data: 아래와 같은 데이터
+        - Add Daniel 1234567890123456 $2000Charge Jane $500
+        - Charge Jane $800
+        - Credit Evan $100
+    """
+
+    tmp = data.split(' ')
+    if tmp[0] == CMD_ADD:
+        # Add case
+        mgr.create_new_account(tmp[1], tmp[2], int(tmp[3][1:]))
+    elif tmp[0] == CMD_CHARGE:
+        # Charge case
+        mgr.get_account(tmp[1]).charge(int(tmp[2][1:]))
+    else:
+        # Credit case
+        mgr.get_account(tmp[1]).credit(int(tmp[2][1:]))
+
+
+if __name__ == '__main__':
+    CMD_ADD = 'Add'
+    CMD_CHARGE = 'Charge'
+    CMD_CREDIT = 'Credit'
+
+    mgr = AccountManager()
+    if len(sys.argv) == 2:
+        # Read date from file
+        with open(sys.argv[1]) as f:
+            for line in f:
+                exe_cmd(line.strip())
+    else:
+        # Read data from STDIN, len(sys.argv) == 1
+        for line in sys.stdin:
+            exe_cmd(line.strip())
+    mgr.show_all_accounts()
