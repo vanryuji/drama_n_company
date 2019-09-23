@@ -33,7 +33,7 @@ if __name__ == '__main__':
     for i in range(len_input-1):
         for j in range(i+1, len_input):
             similarity = -1
-            # similarity = compare_similarity(input_list[i], input_list[j])
+            similarity = compare_similarity(input_list[i], input_list[j])
             if max_similarity <= similarity:
                 if max_similarity < similarity:
                     result = list()
