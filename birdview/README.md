@@ -3,7 +3,7 @@
 
 
 # 설명
-* 코드 : hobby_matching.ipynb
+* 실행코드 : hobby_matching.ipynb
 * data : *.txt
 
 # Reference
