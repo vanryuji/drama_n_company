@@ -3,3 +3,5 @@
 
 # Command
 * dpkg -l | grep php | awk '{print $2}' | tr "\n" " "
+* $(dirname $0)
+* $(cd $(dirname $(dirname $0)); pwd -P)
